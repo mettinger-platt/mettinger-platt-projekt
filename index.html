@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mettinger Platt – Wörter sammeln und bewahren</title>
+  <meta name="description" content="Gemeinsam Mettinger Platt sammeln, erklären und mit Bildern dokumentieren.">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">Platt ut Mettingen</p>
+        <h1>Mettinger Platt<br><span>gemeinsam bewahren.</span></h1>
+        <p class="lead">Ein digitales Wörterbuch für Wörter, Redewendungen und Erinnerungen aus Mettingen – mit Übersetzungen, Erklärungen und Bildern.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#woerterbuch">Wörterbuch öffnen</a>
+          <a class="btn ghost" href="#beitragen">Wort beitragen</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <strong>So funktioniert’s</strong>
+        <ol>
+          <li>Hochdeutsches Wort eintragen</li>
+          <li>Mettinger-Platt-Form ergänzen</li>
+          <li>Optional Erklärung & Bild hinzufügen</li>
+          <li>Nach Prüfung erscheint der Beitrag im Wörterbuch</li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="woerterbuch" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Wörterbuch</p>
+            <h2>Suchen & stöbern</h2>
+          </div>
+          <div class="search-box">
+            <input id="search" type="search" placeholder="z. B. Bett, Kartoffel, Schubkarre …" aria-label="Wörterbuch durchsuchen">
+          </div>
+        </div>
+        <div id="status" class="status"></div>
+        <div id="entries" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="beitragen" class="section soft">
+      <div class="wrap narrow">
+        <p class="eyebrow">Mitmachen</p>
+        <h2>Ein Wort aus Mettingen beitragen</h2>
+        <p class="muted">Gerade alte Begriffe, Redewendungen und Wörter aus Alltag, Landwirtschaft, Haus und Dorfleben sind besonders wertvoll.</p>
+
+        <form id="entryForm" class="form" enctype="multipart/form-data">
+          <div class="two">
+            <label>
+              <span>Hochdeutsches Wort *</span>
+              <input name="german" required maxlength="100" placeholder="z. B. Schubkarre">
+            </label>
+            <label>
+              <span>Mettinger Platt *</span>
+              <input name="platt" required maxlength="100" placeholder="Plattdeutsche Form">
+            </label>
+          </div>
+
+          <label>
+            <span>Erklärung / Aussprache / Beispiel</span>
+            <textarea name="note" maxlength="1000" rows="5" placeholder="Wo wurde das Wort benutzt? Wie spricht man es aus? Kennst du einen Beispielsatz?"></textarea>
+          </label>
+
+          <div class="two">
+            <label>
+              <span>Name (optional)</span>
+              <input name="submitter" maxlength="100" placeholder="Vorname oder Name">
+            </label>
+            <label>
+              <span>Zeitraum (optional)</span>
+              <input name="period" maxlength="80" placeholder="z. B. schon um 1950 gebräuchlich">
+            </label>
+          </div>
+
+          <label class="upload">
+            <span>Bild hochladen (optional)</span>
+            <input id="imageInput" type="file" name="image" accept="image/jpeg,image/png,image/webp">
+            <small>JPG, PNG oder WebP · maximal 5 MB</small>
+          </label>
+
+          <div id="previewWrap" class="preview-wrap hidden">
+            <img id="preview" alt="Vorschau des ausgewählten Bildes">
+            <button type="button" id="removeImage" class="text-btn">Bild entfernen</button>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>Ich darf diesen Text und – falls hochgeladen – dieses Bild für das Mettinger-Platt-Projekt bereitstellen.</span>
+          </label>
+
+          <button class="btn primary submit" type="submit">Beitrag absenden</button>
+          <p id="formMsg" class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap info-grid">
+        <article>
+          <p class="eyebrow">Ziel</p>
+          <h3>Mettinger Platt dokumentieren</h3>
+          <p>Die Sammlung soll echte regionale Formen sichtbar machen und dabei unterschiedliche Schreibweisen nicht vorschnell vereinheitlichen.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Bilder</p>
+          <h3>Auch Dinge festhalten</h3>
+          <p>Fotos alter Werkzeuge, Gegenstände oder Orte können helfen, Wörter verständlicher zu machen und Erinnerungen zu bewahren.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Prüfung</p>
+          <h3>Beiträge erst nach Freigabe</h3>
+          <p>Neue Einsendungen werden zunächst gespeichert und erst nach Prüfung öffentlich angezeigt.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <strong>Mettinger Platt</strong>
+      <span>Ein gemeinschaftliches Wörterbuch-Projekt</span>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

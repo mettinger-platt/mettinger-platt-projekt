@@ -1,0 +1,12 @@
+name = "mettinger-platt"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mettinger-platt"
+database_id = "HIER_DEINE_D1_DATABASE_ID_EINTRAGEN"
+
+[[r2_buckets]]
+binding = "PLATT_IMAGES"
+bucket_name = "mettinger-platt-bilder"
